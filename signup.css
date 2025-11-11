@@ -1,7 +1,7 @@
 /* Font Face Declarations */
 @font-face {
     font-family: 'Friz Quadrata';
-    src: url('FONTS/friz-quadrata-regular-os-5870333951e7c.ttf') format('truetype');
+    src: url('./FONTS/friz-quadrata-regular-os-5870333951e7c.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Friz Quadrata';
-    src: url('FONTS/friz-quadrata-bold-italic-os-5870341205e0f.ttf') format('truetype');
+    src: url('./FONTS/friz-quadrata-bold-italic-os-5870341205e0f.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -40,7 +40,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('IMG/gvllow_bg.jpg');
+    background-image: url('./IMG/gvllow_bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -60,7 +60,7 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('IMG/cracked_grunge_texture_background_2207.jpg');
+    background-image: url('./IMG/cracked_grunge_texture_background_2207.jpg');
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
