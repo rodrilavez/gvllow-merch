@@ -32,6 +32,15 @@ body {
     min-height: 100vh;
 }
 
+/* Mobile body adjustments */
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+}
+
 /* Background with GVLLOW image */
 body::before {
     content: '';
@@ -48,6 +57,16 @@ body::before {
     filter: blur(1px) brightness(0.8) contrast(1.1);
     z-index: -2;
     pointer-events: none;
+}
+
+/* Mobile background fix */
+@media (max-width: 768px) {
+    body::before {
+        position: absolute;
+        background-attachment: scroll;
+        min-height: 100vh;
+        height: 100%;
+    }
 }
 
 
@@ -69,6 +88,15 @@ body::after {
     pointer-events: none;
     z-index: -1;
     filter: contrast(150%) brightness(0.3);
+}
+
+/* Mobile texture overlay fix */
+@media (max-width: 768px) {
+    body::after {
+        position: absolute;
+        min-height: 100vh;
+        height: 100%;
+    }
 }
 
 /* Main Content */
@@ -714,6 +742,21 @@ footer {
 }
 
 @media (max-width: 480px) {
+    /* Ensure background covers full viewport on small screens */
+    body::before {
+        background-size: cover;
+        background-position: center center;
+        width: 100vw;
+        height: 100vh;
+        min-height: 100vh;
+    }
+    
+    body::after {
+        width: 100vw;
+        height: 100vh;
+        min-height: 100vh;
+    }
+    
     .hero-signup {
         padding: 1rem 0.75rem;
         min-height: 100vh;
